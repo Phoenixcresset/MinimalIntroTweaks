@@ -15,7 +15,11 @@ internal class PreInitScenePatch {
     [HarmonyPatch("SkipToFinalSetting")]
     internal static void SkipToSelectedMode(PreInitSceneScript __instance, ref bool ___choseLaunchOption) {
         string mode = Plugin.SelectedMode;
-        if (mode != "online" && mode != "lan") return;
+        if (mode != "online" && mode != "lan" && mode != "off") {
+            Plugin.Logger.LogWarning("Wrong value for AutoSelectMode, defaulting to OFF");
+            mode = "off";
+        }
+        if (mode == "off") return;
 
         #region Skip panels & play sound
         __instance.LaunchSettingsPanels.Do(panel => panel.SetActive(false));
