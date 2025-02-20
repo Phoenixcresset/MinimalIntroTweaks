@@ -52,9 +52,9 @@ public class Config {
     public Config(ConfigFile cfg) {
         configFile = cfg;
 
-        PLUGIN_ENABLED = NewEntry("bEnabled", true, "Enable or disable the plugin globally.");
+        PLUGIN_ENABLED = NewEntry("Enabled", true, "Enable or disable the plugin globally.");
 
-        SKIP_SPLASH_SCREENS = NewEntry(Category.INTRO_TWEAKS, "bSkipSplashScreens", true,
+        SKIP_SPLASH_SCREENS = NewEntry(Category.INTRO_TWEAKS, "SkipSplashScreens", true,
             "Skips those pesky Unity and Zeekers startup logos!"
         );
     }
@@ -67,18 +67,18 @@ public class Config {
 
     public void InitBindings() {
         #region Options related to the intro.
-        SKIP_BOOT_ANIMATION = NewEntry(Category.INTRO_TWEAKS, "bSkipBootAnimation", true,
+        SKIP_BOOT_ANIMATION = NewEntry(Category.INTRO_TWEAKS, "SkipBootAnimation", true,
             "If the loading animation (booting OS) should be skipped."
         );
 
-        AUTO_SELECT_MODE = NewEntry(Category.INTRO_TWEAKS, "sAutoSelectMode", "OFF",
+        AUTO_SELECT_MODE = NewEntry(Category.INTRO_TWEAKS, "AutoSelectMode", "OFF",
             "Which mode to automatically enter into after the splash screen.\n" +
             "Valid options: ONLINE, LAN, OFF"
         );
         #endregion
 
         #region Tweaks to the main menu
-        REMOVE_NEWS_PANEL = NewEntry(Category.MENU_TWEAKS, "bRemoveNewsPanel", false,
+        REMOVE_NEWS_PANEL = NewEntry(Category.MENU_TWEAKS, "RemoveNewsPanel", false,
             "Hides the panel that displays news such as game updates."
         );
         #endregion
