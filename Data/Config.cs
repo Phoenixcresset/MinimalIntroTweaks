@@ -75,107 +75,11 @@ public class Config {
             "Which mode to automatically enter into after the splash screen.\n" +
             "Valid options: ONLINE, LAN, OFF"
         );
-
-        AUTO_SELECT_HOST = NewEntry(Category.INTRO_TWEAKS, "bAutoSelectHost", false,
-            "Whether the 'Host' button is automatically selected when the Online/LAN menu loads."
-        );
         #endregion
 
         #region Tweaks to the main menu
-        ALIGN_MENU_BUTTONS = NewEntry(Category.MENU_TWEAKS, "bAlignMenuButtons", true,
-            "If the main menu buttons should align with each other."
-        );
-
-        FIX_MENU_CANVAS = NewEntry(Category.MENU_TWEAKS, "bFixMenuCanvas", false,
-            "Whether the main menu canvas should have its settings corrected.\n" +
-            "May cause overlapping issues, only enable it if you don't use other mods that edit the menu."
-        );
-
-        FIX_MENU_PANELS = NewEntry(Category.MENU_TWEAKS, "bFixMenuPanels", true,
-            "The main menu panels (host, servers, loading screen) all have anchoring, offset and sizing issues.\n" +
-            "This option helps solve them and improve the look of the menu.\n\nMAY BREAK SOME MODS."
-        );
-
-        FIX_MORE_COMPANY = NewEntry(Category.MENU_TWEAKS, "bFixMoreCompany", true,
-            "Whether to apply fixes to MoreCompany UI elements.\n" +
-            "Fixes include: button placement, header positioning & scaling of cosmetics border.\n\n" +
-            "PRONE TO INCOMPATIBILITIES! TURN THIS OFF IF YOU ENCOUNTER BREAKING BUGS."
-        );
-
-        //IMPROVE_HOST_SCREEN = NewEntry(Category.MENU_TWEAKS, "bImproveHostScreen", true,
-        //    "Should improvements be made to the host screen?"
-        //);
-
-        USE_CUSTOM_HEADER = NewEntry(Category.MENU_TWEAKS, "bUseCustomHeader", false,
-            "Replaces the menu logo/header with a custom one.\n" + 
-            "For your image to be loaded, it must be next to the DLL and named header.png"
-        );
-
-        CUSTOM_HEADER_PATH = NewEntry(Category.MENU_TWEAKS, "sCustomHeaderPath", "/IntroTweaks/header.png",
-            "The path to the header file, relative to BepInEx/plugins." + 
-            "While the '.png' extension is optional, the actual file type must be PNG."
-        );
-
-        REMOVE_LAN_WARNING = NewEntry(Category.MENU_TWEAKS, "bRemoveLanWarning", true,
-            "Hides the warning popup when hosting a LAN session."
-        );
-
-        REMOVE_LAUNCHED_IN_LAN = NewEntry(Category.MENU_TWEAKS, "bRemoveLaunchedInLanText", true,
-            "Hides the 'Launched in LAN mode' text below the Quit button."
-        );
-
         REMOVE_NEWS_PANEL = NewEntry(Category.MENU_TWEAKS, "bRemoveNewsPanel", false,
             "Hides the panel that displays news such as game updates."
-        );
-
-        REMOVE_CREDITS_BUTTON = NewEntry(Category.MENU_TWEAKS, "bRemoveCreditsButton", true,
-            "Hides the 'Credits' button on the main menu. All other buttons are adjusted automatically."
-        );
-        #endregion
-
-        #region Options to control custom version text
-        CUSTOM_VERSION_TEXT = NewEntry(Category.VERSION_TEXT, "bCustomVersionText", true,
-            "Whether to replace the game's version text with a custom alternative."
-        );
-
-        VERSION_TEXT = NewEntry(Category.VERSION_TEXT, "sVersionText", "v$VERSION\n[MODDED]",
-            "Replace the game's version text with this custom text in the main menu.\n" +
-            "To insert the version number, use the $VERSION syntax. E.g. Ver69 would be Ver$VERSION"
-        );
-
-        VERSION_TEXT_SIZE = NewEntry(Category.VERSION_TEXT, "fVersionTextSize", 20f,
-            "The font size of the version text. Min = 10, Max = 40."
-        );
-
-        VERSION_TEXT_OFFSET = NewEntry(Category.VERSION_TEXT, "fVersionTextOffset", 0f,
-            "Use this option to adjust the Y position of the version text if it's out of place.\n" +
-            "For example, when using 3 lines of text, a small positive value would move it back up."
-        );
-
-        ALWAYS_SHORT_VERSION = NewEntry(Category.VERSION_TEXT, "bAlwaysShortVersion", true,
-            "If the custom version text should always show the short 'real' version.\n" +
-            "This will ignore mods like LC_API and MoreCompany that change the game version."
-        );
-        #endregion
-
-        #region Misc options
-        AUTO_START_GAME = NewEntry(Category.MISC, "bAutoStartGame", false, 
-            "If enabled, the lever will be pulled automatically to begin the landing sequence."
-        );
-
-        AUTO_START_GAME_DELAY = NewEntry(Category.MISC, "fAutoStartGameDelay", 1.5f, 
-            "The delay before the lever is automatically pulled when bAutoStartGame is true.\n" +
-            "Minimum: 1 | Maximum: 30"
-        );
-
-        DISABLE_FIRST_DAY_SFX = NewEntry(Category.MISC, "bDisableFirstDaySFX", false,
-            "Toggles the first day ship speaker SFX."
-        );
-
-        GAME_STARTUP_DISPLAY = NewEntry(Category.MISC, "iGameStartupDisplay", 0,
-            "The index of the monitor to display the game on when starting.\n" +
-            "You can find these indexes in your Windows display settings.\n" +
-            "Defaults to 0 (main monitor)."
         );
         #endregion
     }
